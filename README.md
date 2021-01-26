@@ -1,22 +1,33 @@
-# Quasar App (client)
+# Quasar File Manager Sandbox
 
-A Quasar Framework app
+This is a sandbox that demonstrates managing files in Firebase Storage with Quasar Framework.
 
-## Install the dependencies
-```bash
-yarn
+You will need to have a Firebase project available with Storage enabled. This can all be done for free without entering payment information.
+
+Create a `.quasar.env.json` file in the root of the project like the file below. Place your Firebase values in the appropriate `dev` key.
+
+```js
+{
+   "dev": {
+      "ENV_TYPE": "Running Development",
+      "ENV_DEV": "Development",
+      "FIREBASE_APIKEY": "",
+      "FIREBASE_AUTHDOMAIN": "",
+      "FIREBASE_DATABASEURL": "",
+      "FIREBASE_PROJECTID": "",
+      "FIREBASE_STORAGEBUCKET": "",
+      "FIREBASE_MESSAGINGID": "",
+      "FIREBASE_APPID": ""
+   },
+   "production": {
+      "ENV_TYPE": "Running Production",
+      "ENV_PROD": "Production"
+   },
+   "test": {
+      "ENV_TYPE": "Running Test",
+      "ENV_Test": "Test",
+   }
+}
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
-```
-
-
-### Build the app for production
-```bash
-quasar build
-```
-
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+The enviornment won't load properly with `quasar dev`. You must run `yarn run run:dev` so that the environment variables above are registered.
