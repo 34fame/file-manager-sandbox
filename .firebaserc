@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "keeperrx-dev",
+    "test": "keeperrx-test",
+    "dev": "keeperrx-dev"
+  }
+}

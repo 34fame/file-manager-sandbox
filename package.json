@@ -1,0 +1,50 @@
+{
+   "name": "client",
+   "version": "0.0.1",
+   "description": "A Quasar Framework app",
+   "productName": "Quasar App",
+   "author": "Troy Moreland <49797484+34fame@users.noreply.github.com>",
+   "private": true,
+   "scripts": {
+      "run:dev": "cross-env QENV=dev quasar dev",
+      "run:test": "cross-env QENV=test quasar dev"
+   },
+   "dependencies": {
+      "@quasar/extras": "^1.0.0",
+      "apexcharts": "^3.23.1",
+      "auth0-spa-js": "^1.6.5",
+      "axios": "^0.18.1",
+      "core-js": "^3.6.5",
+      "dayjs": "^1.10.4",
+      "firebase": "^8.2.4",
+      "lodash": "^4.17.20",
+      "quasar": "^1.0.0",
+      "uid": "^2.0.0",
+      "vue-apexcharts": "^1.6.0"
+   },
+   "devDependencies": {
+      "@quasar/app": "^2.0.0",
+      "@quasar/quasar-app-extension-qenv": "^1.0.3",
+      "cross-env": "^7.0.3",
+      "npm-run-all": "^4.1.5",
+      "vue": "^2.6.12",
+      "vue-router": "^3.5.0",
+      "vuex": "^3.6.0"
+   },
+   "browserslist": [
+      "last 10 Chrome versions",
+      "last 10 Firefox versions",
+      "last 4 Edge versions",
+      "last 7 Safari versions",
+      "last 8 Android versions",
+      "last 8 ChromeAndroid versions",
+      "last 8 FirefoxAndroid versions",
+      "last 10 iOS versions",
+      "last 5 Opera versions"
+   ],
+   "engines": {
+      "node": ">= 10.18.1",
+      "npm": ">= 6.13.4",
+      "yarn": ">= 1.21.1"
+   }
+}
