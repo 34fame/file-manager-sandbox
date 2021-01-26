@@ -1,10 +1,10 @@
 # Quasar File Manager Sandbox
 
-This is a sandbox that demonstrates managing files in Firebase Storage with Quasar Framework.  You can upload files, even large files.  A card will appear for every file uploaded.  The card has a launch and delete button.  The launch button will open the file in a new tab (try with PDF files).  The delete button will delete the file from Firebase.
+This is a sandbox that demonstrates managing files in Firebase Storage with Quasar Framework. You can upload files, even large files. A card will appear for every file uploaded. The card has a launch and delete button. The launch button will open the file in a new tab (try with PDF files). The delete button will delete the file from Firebase.
 
-The main purpose for building this sandbox was that I was previously handling Storage calls in Cloud Functions that run my application API.  I learned the hard way that Cloud Functions have a 10MB limit on any inbound content.  So all uploads to Storage above this limit will fail.  
+The main purpose for building this sandbox was that I was previously handling Storage calls in Cloud Functions that run my application API. I learned the hard way that Cloud Functions have a 10MB limit on any inbound content. So all uploads to Storage above this limit will fail. I thought moving to Firebase on the client would be easy. The problem I ran into there was the Quasar QUploader component requires you pass it an upload URL. But, there is now URL when making calls straight from the client. So, I got some help with how to use QUploaderBase to have more control over the component. All in all, it works great now. Hopefully someone else will also find it useful.
 
-You will need to have a Firebase project available with Storage enabled. This can all be done for free without entering payment information.  Since there is no authentication setup in this project, you need to set your Storage rules to allow public access:
+You will need to have a Firebase project available with Storage enabled. This can all be done for free without entering payment information. Since there is no authentication setup in this project, you need to set your Storage rules to allow public access:
 
 ```
 rules_version = '2';
