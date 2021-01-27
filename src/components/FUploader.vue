@@ -135,6 +135,7 @@ export default {
                         this.$emit('refresh')
                      })
                      this.reset()
+                     this.filesUploading = []
                      resolve()
                   }
                )
