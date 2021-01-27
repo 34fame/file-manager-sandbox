@@ -92,7 +92,10 @@ export default {
                      message: `One or more of your files failed to upload. ${err}`,
                   })
                })
-               .finally(() => {})
+               .finally(() => {
+                  this.reset()
+                  this.filesUploading = []
+               })
          } catch (err) {
             console.error('error', err)
             return false
@@ -134,8 +137,6 @@ export default {
                         })
                         this.$emit('refresh')
                      })
-                     this.reset()
-                     this.filesUploading = []
                      resolve()
                   }
                )
